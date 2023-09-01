@@ -19,7 +19,7 @@ class CartViewModel(
     private val _onCartProductDeleted: MutableLiveData<Boolean> = MutableLiveData(false)
     val onCartProductDeleted: LiveData<Boolean> get() = _onCartProductDeleted
 
-    fun getAllCartProducts() {
+    fun fetchAllCartProducts() {
         _cartProducts.value = cartRepository.getAllCartProducts()
     }
 
